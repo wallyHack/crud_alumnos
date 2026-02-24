@@ -121,13 +121,20 @@ class TestEscuela():
     escuela.agregar_alumno(Alumno(36789, "Pedro", "Garcia", "Garcia", "Masculino", "CDMX", 21))
     escuela.agregar_alumno(Alumno(48901, "Ana", "Lopez", "Lopez", "Femenino", "CDMX", 31))
     escuela.agregar_alumno(Alumno(56789, "Luis", "Martinez", "Martinez", "Masculino", "CDMX", 25))
-
-    for i in range(10):
-        # MENU DE OPCIONES
-        opciones = int(
-            input("\nMENU: SISTEMA ESCOLAR \n1. Listar alumnos\n2. Buscar alumno\n3. Agregar alumno\n4. Actualizar alumno\n5. Eliminar alumno\n6. Salir\nSeleccione una opcion: ")  
-        )
+    
+    while True:
+        menu = """
+            ********** MENU - SISTEMA ESCOLAR ********** \n
+            1) LISTAR ALUMNOS"
+            2) BUSCAR ALUMNO
+            3) AGREGAR ALUMNO
+            4) ACTUALIZAR ALUMNO
+            5) ELIMINAR ALUMNO
+            6) SALIR
+        """
         
+        print(menu)
+        opciones = int(input("\n Selecciona una opcion: \n"))
         match opciones:
             case 1: 
                 print("LISTAR ALUMNOS")
@@ -178,6 +185,8 @@ class TestEscuela():
             case 6:
                 print("SALIR")
                 break
+        
+        
     
         
     """
